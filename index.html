@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zrno Tech</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">ZRNO TECH</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Building Websites That Inspire</h1>
+            <p>Creative solutions tailored to your business needs.</p>
+            <a href="#contact" class="cta-button">Contact Us</a>
+        </div>
+    </header>
+    
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <!-- About Us Header -->
+        <h2 class="about-header">About Us</h2>
+    
+        <!-- About Details Section -->
+        <div class="about-details">
+            <!-- Mission Section -->
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>We strive to build websites that are not only functional but also inspire. Our goal is to provide innovative, user-friendly solutions tailored to your needs, making sure your digital presence stands out.</p>
+            </div>
+    
+            <!-- Why Choose Us Section -->
+            <div class="why-choose-us">
+                <h3>Why Choose Us?</h3>
+                <div class="values">
+                    <div class="value">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Innovation</h4>
+                        <p>We lead with fresh ideas, continuously pushing the boundaries of digital design.</p>
+                    </div>
+                    <div class="value">
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <h4>Collaboration</h4>
+                        <p>We work closely with clients to craft personalized solutions that meet their unique needs.</p>
+                    </div>
+                    <div class="value">
+                        <div class="icon"><i class="fas fa-heart"></i></div>
+                        <h4>Passion</h4>
+                        <p>Driven by our passion, we pour heart and soul into every project, delivering outstanding results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+
+    <!-- Services Section -->
+<!-- Services Section -->
+<section id="services" class="our-services">
+    <h2 class="services-header">Our Services</h2>
+
+    <div class="services-list">
+        
+        <div class="service">
+            <div class="service-icon"><i class="fas fa-laptop"></i></div> <!-- New icon -->
+            <h3>Basic Website Design</h3>
+            <p>Our basic website design services provide clean, user-friendly websites that are perfect for small businesses or personal projects.</p>
+            <span class="price">1000$</span>
+        </div>
+        <div class="service">
+            <div class="service-icon"><i class="fas fa-id-badge"></i></div> <!-- New icon -->
+            <h3>Online Resumes & Portfolios</h3>
+            <p>Build your professional presence online with a personalized resume or portfolio that highlights your skills and experience.</p>
+            <span class="price">1000$</span>
+        </div>
+        <div class="service">
+            <div class="service-icon"><i class="fas fa-store-alt"></i></div> <!-- New icon -->
+            <h3>Small Business Websites</h3>
+            <p>We design responsive and functional websites for small businesses to help you stand out and reach your customers effectively.</p>
+            <span class="price">1200$</span>
+        </div>
+        <div class="service">
+            <div class="service-icon"><i class="fas fa-building"></i></div>
+            <h3>Company Branding Website</h3>
+            <p>Build your company’s online presence with a website that reflects your brand’s values, vision, and services.</p>
+            <span class="price">1300$</span>
+        </div>
+        <div class="service">
+            <div class="service-icon"><i class="fas fa-globe"></i></div> <!-- New icon -->
+            <h3>Domain Registration</h3>
+            <p>Secure a unique and professional domain name for your website to improve your online visibility and credibility.</p>
+            <span class="price">25$</span>
+        </div>
+        <div class="service">
+            <div class="service-icon"><i class="fas fa-address-book"></i></div> <!-- New icon -->
+            <h3>Website changes</h3>
+            <p>Change requests on the website are FREE</p>
+            <span class="price">FREE</span>
+        </div>
+    </div>
+</section>
+
+
+    
+    
+
+    <!-- Contact Section -->
+    <!-- Footer Section with Contact Form -->
+<footer id="contact">
+    <div class="container">
+        <h2 class="section-title">CONTACT US</h2>
+        
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="4bcf8d32-0da9-446a-96a5-36cddb7517a5">
+            <input type="text"  name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+           
+            <textarea placeholder="Your Message" name="message" required></textarea>
+            <div class="h-captcha" data-captcha="true"></div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</footer>
+
+</body>
+
+<script>
+    // Change navbar background on scroll
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<script>
+    // Get the toggle button, navbar links, and links inside the navbar
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbarLinks = document.querySelector('.navbar-links');
+    const navLinks = document.querySelectorAll('.navbar-links a');
+
+    // Toggle the menu when the hamburger icon is clicked
+    mobileMenu.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+    });
+
+    // Close the menu when any navbar link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarLinks.classList.remove('active');
+        });
+    });
+</script>
+
+<script>
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', function(e) {
+    
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+    
+        if (!hCaptcha) {
+            e.preventDefault();
+            alert("Please fill out captcha field")
+            return
+        }
+    });
+    </script>
+
+
+
+</html>
