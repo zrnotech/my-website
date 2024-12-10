@@ -130,6 +130,35 @@
     </div>
 </section>
 
+<!--FAQ-->
+<section id="faq" class="faq">
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3 class="faq-question">What services do you offer?</h3>
+        <p class="faq-answer">We specialize in website development, including custom design, front-end, back-end development and website optimization.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">How long does it take to build a website?</h3>
+        <p class="faq-answer">The timeline varies depending on the project size and requirements. On average, it takes 1 – 6 weeks from the initial consultation to the final launch.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">Will my website be mobile-friendly?</h3>
+        <p class="faq-answer">Absolutely! All our websites are optimized for responsiveness and look great on all devices, from desktops to smartphones.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">What technologies do you use for development?</h3>
+        <p class="faq-answer">We use a variety of technologies, including HTML, CSS, JavaScript, WordPress, and more, tailored to your project’s needs.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">How do I get started?</h3>
+        <p class="faq-answer">Simply fil out our contact form and we will contact you, or contact us on e-mail: zrnotech@gmail.com.</p>
+    </div>
+</section>
+
+
+
+
+
 
     
     
@@ -198,7 +227,31 @@
             return
         }
     });
-    </script>
+</script>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            // Toggle open class to show or hide answer
+            item.classList.toggle('open');
+            const answer = item.querySelector('.faq-answer');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('open');
+                    otherItem.querySelector('.faq-answer').style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
 
 
 
