@@ -468,3 +468,103 @@ header::before {
 html {
     scroll-behavior: smooth;
 }
+
+/* FAQ Section Styling */
+.faq {
+    padding: 80px 20px;
+    background-color: #ffffff; /* Light background for contrast */
+}
+
+.faq-heading {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px; /* Keep padding for spacing */
+}
+
+.faq-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width of the container */
+    height: 2px; /* Thickness of the line */
+    background-color: #8A2BE2; /* Purple color */
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    width: 100%;
+    margin-bottom: 0; /* Removed the bottom margin */
+    background-color: #f5f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.faq-item:hover {
+    background-color: #e0e0e0; /* Lighten the background on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slightly increase shadow */
+}
+
+.faq-question {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    position: relative;
+    padding-right: 25px;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+    padding-top: 10px;
+}
+
+/* FAQ Question Arrow */
+.faq-question::after {
+    content: " ▼";
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+/* When open, rotate the arrow */
+.faq-item.open .faq-question::after {
+    content: " ▲";
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+    .faq-heading {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
+
+
+
